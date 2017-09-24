@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thing.name %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @thing.width %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @thing.length %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @thing.xPos %><%= @thing.yPos %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
