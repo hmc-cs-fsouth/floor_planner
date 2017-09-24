@@ -1,5 +1,0 @@
-class AddNameToThings < ActiveRecord::Migration[5.1]
-  def change
-    add_column :things, :name, :string
-  end
-end

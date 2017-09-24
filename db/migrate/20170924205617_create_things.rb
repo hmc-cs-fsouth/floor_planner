@@ -1,14 +1,14 @@
 class CreateThings < ActiveRecord::Migration[5.1]
   def change
     create_table :things do |t|
-      t.belongs_to :room, index: true
+      t.string :name
+      t.integer :height
+      t.integer :width
       t.integer :xPos
       t.integer :yPos
-      t.integer :width
-      t.integer :length
+      t.references :room, foreign_key: true
 
       t.timestamps
     end
-
   end
 end

@@ -1,7 +1,7 @@
-<%= form_with(model: thing, local: true) do |form| %>
+<%= form_with(model: [@room, @room.things.build]) do |form| %>
   <% if thing.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(room.errors.count, "error") %> prohibited this thing from being saved:</h2>
+      <h2><%= pluralize(thing.errors.count, "error") %> prohibited this thing from being saved:</h2>
 
       <ul>
       <% thing.errors.full_messages.each do |message| %>

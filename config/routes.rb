@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :rooms
+
+  
+resources :rooms do
+  resources :things
+end
   
 
   root :to => 'rooms#index'

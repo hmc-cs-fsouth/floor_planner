@@ -17,10 +17,32 @@
 
 <%= link_to 'Edit', edit_room_path(@room) %>
 
-<h2>Things</h2>
-<%= render @room.things %>
-
 <h2>Add a thing:</h2>
-<%= link_to 'New Things', new_thing_path %>
+<%= form_with(model: [ @room, @room.things.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :width %><br>
+    <%= form.text_area :width %>
+  </p>
+    <p>
+    <%= form.label :length %><br>
+    <%= form.text_area :length %>
+  </p>
+    <p>
+    <%= form.label :xPos %><br>
+    <%= form.text_area :xPos %>
+  </p>
+    <p>
+    <%= form.label :yPos %><br>
+    <%= form.text_area :yPos %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Back', rooms_path %>
