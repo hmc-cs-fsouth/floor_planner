@@ -1,4 +1,4 @@
-#Floor_Planner
+# Floor_Planner
 
 Contributors: Finn Southerland (hmc-cs-fsouth) 
 
@@ -10,16 +10,16 @@ This app will allow users to:
 
 Functionality:
 Currently only the first two bullets covered in the MVP are functional. The user can:  
--Create, edit, and destroy Rooms with names and dimensions:
+-Create, edit, and destroy Rooms with names and dimensions:  
 ![New Rooms](https://github.com/hmc-cs-fsouth/floor_planner/blob/master/Screenshots/New%20Roomm.PNG)
 
--Create, edit, and destroy things in each room with names, dimmensions, and positions.
+-Create, edit, and destroy things in each room with names, dimmensions, and positions.  
 ![Add things](https://github.com/hmc-cs-fsouth/floor_planner/blob/master/Screenshots/AddThing.PNG)
 
 -View a list of rooms.  
 ![View Rooms](https://github.com/hmc-cs-fsouth/floor_planner/blob/master/Screenshots/Main.PNG)
 
--View each room's data including dimensions and included things. 
+-View each room's data including dimensions and included things.  
 ![View individual Rooms](https://github.com/hmc-cs-fsouth/floor_planner/blob/master/Screenshots/ViewRoom.PNG)
 
 Architecture:  
