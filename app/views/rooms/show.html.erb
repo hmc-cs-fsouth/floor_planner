@@ -17,6 +17,23 @@
 
 <%= link_to 'Edit', edit_room_path(@room) %>
 
+<h2>Things:</h2>
+<% @room.things.each do |thing| %>
+  <p>
+    <strong><%= thing.name %></strong>
+  </p>
+ 
+  <p>
+    <strong>Size:</strong>
+    <%= thing.width %> <%='by' %> <%= thing.length %>
+  </p>
+
+  <p>
+    <strong>Position:</strong>
+    (<%= thing.xPos %>,<%= thing.yPos %>)
+  </p> 
+<% end %>
+
 <h2>Add a thing:</h2>
 <%= form_with(model: [ @room, @room.things.build ], local: true) do |form| %>
   <p>
