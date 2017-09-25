@@ -32,6 +32,12 @@
     <strong>Position:</strong>
     (<%= thing.xPos %>,<%= thing.yPos %>)
   </p> 
+
+  <p>
+    <%= link_to 'Remove thing', [thing.room, thing],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
 <% end %>
 
 <h2>Add a thing:</h2>

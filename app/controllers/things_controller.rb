@@ -6,6 +6,13 @@ class ThingsController < ApplicationController
 		redirect_to room_path(@room)
 	end
 
+	def destroy
+    @room = Room.find(params[:room_id])
+    @thing = @room.things.find(params[:id])
+    @thing.destroy
+    redirect_to room_path(@room)
+  end
+
 	private
 	  def thing_params
 	  	params.require(:thing).permit(:name, :width, :length, :xPos, :yPos)
